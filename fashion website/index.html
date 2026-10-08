@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VOGUEX | Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">VOGUE<span>X</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#categories">Categories</a>
+            <a href="#new">New Arrivals</a>
+        </nav>
+
+        <div class="nav-icons">
+            <button onclick="openSearch()">⌕</button>
+            <button onclick="showWishlist()">♡ <small id="wishlistCount">0</small></button>
+            <button onclick="openCart()">🛒 <small id="cartCount">0</small></button>
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH -->
+    <div id="searchBox" class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            onkeyup="searchProducts()"
+        >
+    </div>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">NEW SEASON 2026</p>
+
+            <h1>
+                STYLE THAT
+                <br>
+                SPEAKS.
+            </h1>
+
+            <p>
+                Discover modern fashion designed for
+                confidence, comfort and everyday style.
+            </p>
+
+            <a href="#shop" class="hero-btn">
+                SHOP NOW →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="section">
+
+        <div class="section-title">
+            <p>EXPLORE</p>
+            <h2>Shop By Category</h2>
+        </div>
+
+        <div class="categories">
+
+            <div class="category men">
+                <div>
+                    <h3>MEN</h3>
+                    <button onclick="filterCategory('Men')">
+                        SHOP NOW →
+                    </button>
+                </div>
+            </div>
+
+            <div class="category women">
+                <div>
+                    <h3>WOMEN</h3>
+                    <button onclick="filterCategory('Women')">
+                        SHOP NOW →
+                    </button>
+                </div>
+            </div>
+
+            <div class="category accessories">
+                <div>
+                    <h3>ACCESSORIES</h3>
+                    <button onclick="filterCategory('Accessories')">
+                        SHOP NOW →
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section id="shop" class="section products-section">
+
+        <div class="section-title">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>Trending Products</h2>
+
+        </div>
+
+
+        <!-- FILTER -->
+        <div class="filters">
+
+            <button onclick="filterCategory('All')">
+                All
+            </button>
+
+            <button onclick="filterCategory('Men')">
+                Men
+            </button>
+
+            <button onclick="filterCategory('Women')">
+                Women
+            </button>
+
+            <button onclick="filterCategory('Accessories')">
+                Accessories
+            </button>
+
+        </div>
+
+
+        <div id="productGrid" class="product-grid"></div>
+
+    </section>
+
+
+    <!-- PROMO -->
+    <section class="promo">
+
+        <div>
+
+            <p>LIMITED OFFER</p>
+
+            <h2>
+                GET 20% OFF
+                <br>
+                YOUR FIRST ORDER
+            </h2>
+
+            <button onclick="showMessage()">
+                SHOP COLLECTION →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+
+        <h2>Stay In Style</h2>
+
+        <p>
+            Subscribe for new arrivals, exclusive offers
+            and fashion inspiration.
+        </p>
+
+        <div class="newsletter-form">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+            <button onclick="subscribe()">
+                SUBSCRIBE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART SIDEBAR -->
+    <div id="cartOverlay" class="overlay">
+
+        <div class="cart">
+
+            <div class="cart-header">
+
+                <h2>Your Cart</h2>
+
+                <button onclick="closeCart()">✕</button>
+
+            </div>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-footer">
+
+                <div>
+                    <span>Total</span>
+                    <strong id="cartTotal">₹0</strong>
+                </div>
+
+                <button onclick="checkout()">
+                    CHECKOUT
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            VOGUE<span>X</span>
+        </div>
+
+        <p>
+            Modern fashion for modern lifestyles.
+        </p>
+
+        <div class="social">
+            Instagram · Facebook · Pinterest
+        </div>
+
+        <p class="copyright">
+            © 2026 VOGUEX. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
